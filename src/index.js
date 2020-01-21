@@ -1,6 +1,8 @@
 //Get query string from window object
-const queryString = window.location.search.substring(1)
-
+const queryString =  typeof window !== 'undefined' && window
+  ? window.location.search.substring(1)
+  : {}
+  
 const queryParam = () => {
   //Split by & and reduce array into object
   return queryString.split('&').reduce( ( acc, item ) => {

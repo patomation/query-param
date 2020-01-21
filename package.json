@@ -1,6 +1,6 @@
 {
   "name": "@patomation/query-param",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A module to get query string parameters from the window object ",
   "main": "src/index.js",
   "scripts": {
