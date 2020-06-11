@@ -10,6 +10,9 @@ const queryParam = () => {
     const [ key, value ] = item.split('=')
     //If key and value add to object
     if(key && value) acc[key] = value.replace('%20', ' ')
+    // handle booleans
+    if(value === 'true') acc[key] = true
+    if(value === 'false') acc[key] = false
     //return mutated object
     return acc
   }, {})
