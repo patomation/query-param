@@ -1,10 +1,20 @@
 {
   "name": "@patomation/query-param",
-  "version": "0.0.2",
+  "version": "1.0.0-beta1",
   "description": "A module to get query string parameters from the window object ",
-  "main": "src/index.js",
+  "public": true,
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "npm run build",
+    "build": "rollup -c",
+    "lint": "eslint --ext .ts .",
+    "test": "mocha -r ts-node/register test/test.ts",
+    "coverage": "nyc mocha -r ts-node/register test/test.ts"
   },
   "repository": {
     "type": "git",
@@ -26,5 +36,36 @@
   "bugs": {
     "url": "https://github.com/patomation/query-param/issues"
   },
-  "homepage": "https://github.com/patomation/query-param#readme"
+  "homepage": "https://github.com/patomation/query-param#readme",
+  "devDependencies": {
+    "@commitlint/config-conventional": "11.0.0",
+    "@types/chai": "4.2.14",
+    "@types/jsdom": "16.2.5",
+    "@types/jsdom-global": "3.0.2",
+    "@types/mocha": "8.0.4",
+    "@types/node": "14.14.7",
+    "@typescript-eslint/eslint-plugin": "4.7.0",
+    "chai": "4.2.0",
+    "commitlint": "11.0.0",
+    "coveralls": "3.1.0",
+    "eslint": "7.13.0",
+    "eslint-config-standard-with-typescript": "19.0.1",
+    "eslint-plugin-chai": "0.0.1",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-mocha": "8.0.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.1.0",
+    "husky": "4.3.0",
+    "jsdom": "16.4.0",
+    "jsdom-global": "3.0.2",
+    "mocha": "8.2.1",
+    "nyc": "15.1.0",
+    "rollup": "2.33.1",
+    "rollup-plugin-typescript2": "0.29.0",
+    "ts-node": "9.0.0",
+    "tsconfigs": "5.0.0",
+    "typescript": "4.0.5"
+  },
+  "dependencies": {}
 }

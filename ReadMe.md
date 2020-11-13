@@ -18,7 +18,7 @@ import queryParam from '@patomation/query-param'
 const myParams = queryParam()
 ```
 
-Example url migt be:
+Example url might be:
 ```
 https://mySite.com/?make=Tesla&model=T&year=2019
 ```
