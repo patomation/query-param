@@ -42,5 +42,3 @@ describe('queryParam does not break if no search in url', (): void => {
     expect(result).to.deep.equal(expected)
   })
 })
-
-

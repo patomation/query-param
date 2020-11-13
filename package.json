@@ -1,6 +1,6 @@
 {
   "name": "@patomation/query-param",
-  "version": "1.0.0-beta1",
+  "version": "1.0.0",
   "description": "A module to get query string parameters from the window object ",
   "public": true,
   "main": "lib/index.cjs.js",
@@ -10,11 +10,17 @@
     "lib"
   ],
   "scripts": {
-    "prepublish": "npm run build",
+    "prepublish": "run-s lint test build",
     "build": "rollup -c",
     "lint": "eslint --ext .ts .",
     "test": "mocha -r ts-node/register test/test.ts",
     "coverage": "nyc mocha -r ts-node/register test/test.ts"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "run-s lint test"
+    }
   },
   "repository": {
     "type": "git",
@@ -60,6 +66,7 @@
     "jsdom": "16.4.0",
     "jsdom-global": "3.0.2",
     "mocha": "8.2.1",
+    "npm-run-all": "4.1.5",
     "nyc": "15.1.0",
     "rollup": "2.33.1",
     "rollup-plugin-typescript2": "0.29.0",
