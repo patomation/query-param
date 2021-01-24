@@ -26,3 +26,28 @@ export const queryParam = (): Params => {
     return acc
   }, {})
 }
+
+export const localStorageQueryParam = (): Params => {
+  const LOCAL_STORAGE_KEY = 'persist:queryParam'
+  const params = queryParam()
+
+  const persistParamString = localStorage.getItem(LOCAL_STORAGE_KEY)
+
+  console.log('persistParamString', persistParamString)
+
+  let persistParams = {}
+  if (persistParamString !== null && persistParamString !== undefined) {
+    persistParams = JSON.parse(persistParamString)
+  }
+
+  // Combine params from query string and from local storage
+  const newParams = {
+    ...persistParams,
+    ...params
+  }
+
+  // Save the combined params back to local storage for next time
+  localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newParams))
+
+  return newParams
+}
