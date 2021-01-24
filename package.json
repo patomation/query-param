@@ -1,6 +1,6 @@
 {
   "name": "@patomation/query-param",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A module to get query string parameters from the window object ",
   "public": true,
   "main": "lib/index.cjs.js",
@@ -74,6 +74,7 @@
     "nyc": "15.1.0",
     "rollup": "2.33.1",
     "rollup-plugin-typescript2": "0.29.0",
+    "standard-version": "9.1.0",
     "ts-node": "9.0.0",
     "tsconfigs": "5.0.0",
     "typescript": "4.0.5"
