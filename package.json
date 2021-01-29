@@ -16,7 +16,7 @@
     "test": "mocha -r ts-node/register test/test.ts",
     "coverage": "nyc mocha -r ts-node/register test/test.ts",
     "release": "standard-version",
-    "publish": "git push --follow-tags && npm publish"
+    "publish": "git push --follow-tags"
   },
   "husky": {
     "hooks": {
