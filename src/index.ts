@@ -33,8 +33,6 @@ export const localStorageQueryParam = (): Params => {
 
   const persistParamString = localStorage.getItem(LOCAL_STORAGE_KEY)
 
-  console.log('persistParamString', persistParamString)
-
   let persistParams = {}
   if (persistParamString !== null && persistParamString !== undefined) {
     persistParams = JSON.parse(persistParamString)
