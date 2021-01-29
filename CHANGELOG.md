@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/patomation/query-param/compare/v1.2.0...v1.3.0) (2021-01-29)
+
+
+### Features
+
+* **dev:** relase and publish npm scripts ([4c117cd](https://github.com/patomation/query-param/commit/4c117cdf7b3e38c4c3edb0d028339bbdf820862b))
+
+
+### Bug Fixes
+
+* **query-param:** remove console log ([f033d65](https://github.com/patomation/query-param/commit/f033d65db61fcd70d93ad3b24b45767ad2909efa))
+
 ## 1.2.0 (2021-01-24)
 
 
