@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/patomation/query-param/compare/v1.3.0...v1.4.0) (2021-03-13)
+
+
+### Features
+
+* **query-param:** simple array support ([12b24d5](https://github.com/patomation/query-param/commit/12b24d596da1678b561e9b129487fa87409eb89d))
+
+
+### Bug Fixes
+
+* **dev:** pre-commit script fix. not working with run-s ([024155d](https://github.com/patomation/query-param/commit/024155dcbd5dae6bc9a19a0679044dada17bfa38))
+* **dev:** publish command ([5a310ec](https://github.com/patomation/query-param/commit/5a310ec1fb87d4cdcf0b92f153149ee729305dc1))
+
 ## [1.3.0](https://github.com/patomation/query-param/compare/v1.2.0...v1.3.0) (2021-01-29)
 
 
