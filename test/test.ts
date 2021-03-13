@@ -53,6 +53,19 @@ describe('queryParam does not break if no search in url', (): void => {
   })
 })
 
+describe('queryParam get arrays', (): void => {
+  before(() => {
+    globalJsdom('', { url: 'https://patomation.com?arr=[abc,def,ghi,jkl]' })
+  })
+  it('it can get expected params from url', (): void => {
+    const expected: Params = {
+      arr: ['abc', 'def', 'ghi', 'jkl']
+    }
+    const result = queryParam()
+    expect(result).to.deep.equal(expected)
+  })
+})
+
 describe('localStorageQueryParam', () => {
   it('it can get param and store it', () => {
     globalJsdom('', { url: 'https://patomation.com?myParam=veryNice' })
